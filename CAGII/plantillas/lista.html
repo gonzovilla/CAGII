@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block contenido %}
+    {% if notas %}
+	{% for nota in notas %}
+        <li><a href="{% url "detalle_de_nota" nota.id %}">{{ nota.nombre }}</a> <small>[Última modificación hace {{nota.ultima_modificacion|timesince}}]</small></li>
+    {% endfor %}
+    {% else %}
+    No hay ninguna nota
+    {% endif %}
+{% endblock %}

@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+        <title>Notas online</title>        
+    </head>
+    <body bgcolor="#D7DF01">
+      <center>
+        <br><br><br>
+        <h1>Notas online</h1>
+        <a href="{% url "lista_de_notas" %}">Lista de Notas</a> | <a href="{% url "crear_nota" %}">Crear nueva nota</a>
+        <br><br><br>
+        <div id="contenido">
+       {% block contenido %}
+       
+       {% endblock %} 
+       </div>
+      </center>
+    </body>
+</html>    

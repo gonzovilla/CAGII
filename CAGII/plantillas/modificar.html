@@ -1,0 +1,8 @@
+{% extends 'base.html' %}
+
+{% block contenido %}
+    <form action="" method="post">{% csrf_token %}
+        {{ form.as_p }}    
+        <p><input type="submit" value="Continuar" /> o <a href="{% url "lista_de_notas" %}">Cancelar</a></p>
+    </form>
+{% endblock %}
